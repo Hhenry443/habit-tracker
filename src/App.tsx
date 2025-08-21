@@ -1,36 +1,35 @@
-import logo from './logo.svg'
+import {
+  faCode,
+  faDumbbell,
+  faRunning,
+} from "@fortawesome/free-solid-svg-icons";
+import Habit from "./components/Habit";
 
 function App() {
   return (
-    <div className="text-center">
-      <header className="min-h-screen flex flex-col items-center justify-center bg-[#282c34] text-white text-[calc(10px+2vmin)]">
-        <img
-          src={logo}
-          className="h-[40vmin] pointer-events-none animate-[spin_20s_linear_infinite]"
-          alt="logo"
+    <>
+      <div className="w-full h-screen flex items-center flex-col space-y-4 mt-8">
+        <Habit
+          habitText="Code"
+          habitIcon={faCode}
+          habitColour="red"
+          habitColourBrightness="200"
         />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="text-[#61dafb] hover:underline"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a
-          className="text-[#61dafb] hover:underline"
-          href="https://tanstack.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn TanStack
-        </a>
-      </header>
-    </div>
-  )
+        <Habit
+          habitText="Gym"
+          habitIcon={faDumbbell}
+          habitColour="blue"
+          habitColourBrightness="200"
+        />
+        <Habit
+          habitText="Run"
+          habitIcon={faRunning}
+          habitColour="green"
+          habitColourBrightness="200"
+        />
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
